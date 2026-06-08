@@ -643,6 +643,85 @@
     letter-spacing: 0.05em;
   }
 
+
+  /* Creative & Communications Section */
+  #creative { background: var(--bg2); }
+  .creative-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; margin-top: 4rem;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .creative-card {
+    background: var(--bg3); padding: 2.5rem;
+    position: relative; overflow: hidden;
+    transition: background 0.3s ease;
+  }
+  .creative-card:hover { background: #151515; }
+  .creative-card.wide {
+    grid-column: 1 / -1;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; align-items: center;
+  }
+  .creative-card-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-dim); margin-bottom: 1.2rem;
+  }
+  .creative-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 300; color: var(--text);
+    line-height: 1.2; margin-bottom: 1rem;
+  }
+  .creative-card-desc {
+    color: var(--text-muted); font-size: 0.88rem; line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  .creative-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .creative-tag {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border);
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-dim);
+    transition: all 0.2s;
+  }
+  .creative-card:hover .creative-tag { border-color: #2a2a2a; color: var(--text-muted); }
+  .creative-edu-block {
+    display: flex; flex-direction: column; gap: 1.5rem;
+  }
+  .creative-edu-item {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    position: relative;
+  }
+  .creative-edu-item::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 2px; height: 100%; background: var(--accent);
+  }
+  .creative-edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 400; color: var(--text);
+    margin-bottom: 0.3rem;
+  }
+  .creative-edu-school {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .creative-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem; font-style: italic; font-weight: 300;
+    color: var(--text-muted); line-height: 1.6;
+    border-left: 2px solid var(--accent);
+    padding-left: 1.5rem; margin-top: 1rem;
+  }
+  @media (max-width: 900px) {
+    .creative-grid { grid-template-columns: 1fr; }
+    .creative-card.wide { grid-column: 1; grid-template-columns: 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -655,6 +734,7 @@
   <a href="#hero" class="nav-logo">P<span>.</span>Srivastava</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
+    <li><a href="#creative">Creative</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#powerbi">BI Dashboard</a></li>
@@ -751,6 +831,93 @@
         <div class="highlight-desc">G2 / Gartner / TrustRadius leader badges earned</div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CREATIVE & COMMS -->
+<section id="creative">
+  <div class="section-label">Creative &amp; Communications</div>
+  <h2 class="section-title">The storyteller<br><em>behind the data</em></h2>
+  <p class="section-sub">Marketing is equal parts science and craft. My foundation in Media Studies and MBA in Marketing gives me both the creative instinct to tell stories and the strategic rigour to make them work.</p>
+
+  <div class="creative-grid reveal">
+
+    <!-- Featured wide card: Education -->
+    <div class="creative-card wide">
+      <div>
+        <div class="creative-card-num">Foundation</div>
+        <div class="creative-card-title">Where the storytelling<br>instinct was built</div>
+        <p class="creative-card-desc">A Bachelor's in Media Studies gave me a deep understanding of how communication works — how audiences consume content, how narratives are constructed, and how media shapes perception. My MBA in Marketing layered strategic and commercial thinking on top of that creative foundation.</p>
+        <div class="creative-quote">"I don't just write copy — I think about who is reading it, why they care, and what they'll do next."</div>
+      </div>
+      <div class="creative-edu-block">
+        <div class="creative-edu-item">
+          <div class="creative-edu-degree">Bachelor of Arts — Media Studies</div>
+          <div class="creative-edu-school">University of Allahabad  ·  2018</div>
+        </div>
+        <div class="creative-edu-item">
+          <div class="creative-edu-degree">PGDM (MBA) — Marketing</div>
+          <div class="creative-edu-school">Karnavati University  ·  2020</div>
+        </div>
+        <div class="creative-edu-item">
+          <div class="creative-edu-degree">Internships — Colgate Palmolive &amp; Coca-Cola</div>
+          <div class="creative-edu-school">Brand &amp; Marketing Practice  ·  2019</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 1: Narrative & Messaging -->
+    <div class="creative-card">
+      <div class="creative-card-num">01 — Craft</div>
+      <div class="creative-card-title">Narrative &amp; Messaging</div>
+      <p class="creative-card-desc">At TIBCO, I translated deeply technical enterprise software into crisp, differentiated messaging for Gartner, Forrester, IDC, and global buyers. From briefing documents to solution briefs to blog content — I write to be understood, not to impress.</p>
+      <div class="creative-tags">
+        <div class="creative-tag">Messaging Frameworks</div>
+        <div class="creative-tag">Briefing Docs</div>
+        <div class="creative-tag">Technical Writing</div>
+        <div class="creative-tag">Blog Content</div>
+      </div>
+    </div>
+
+    <!-- Card 2: Campaign Storytelling -->
+    <div class="creative-card">
+      <div class="creative-card-num">02 — Execution</div>
+      <div class="creative-card-title">Campaign Storytelling</div>
+      <p class="creative-card-desc">From the 'ZUNG se JUNG' Big FM radio campaign that drove 110% inquiry growth, to Meta Ads and email flows for StarlightKpop — I understand how to wrap a message in a format that moves people to act.</p>
+      <div class="creative-tags">
+        <div class="creative-tag">Radio Campaigns</div>
+        <div class="creative-tag">Meta Ads</div>
+        <div class="creative-tag">Email Copy</div>
+        <div class="creative-tag">Brand Voice</div>
+      </div>
+    </div>
+
+    <!-- Card 3: Analyst & Stakeholder Comms -->
+    <div class="creative-card">
+      <div class="creative-card-num">03 — Influence</div>
+      <div class="creative-card-title">Analyst &amp; Stakeholder Communications</div>
+      <p class="creative-card-desc">Served as the bridge between TIBCO and Gartner, Forrester, and IDC — preparing all briefing materials, talking points, and supporting documents for high-stakes analyst conversations. Owned the narrative that shaped how the market saw our products.</p>
+      <div class="creative-tags">
+        <div class="creative-tag">Analyst Briefings</div>
+        <div class="creative-tag">Talking Points</div>
+        <div class="creative-tag">Executive Comms</div>
+        <div class="creative-tag">ARInsights</div>
+      </div>
+    </div>
+
+    <!-- Card 4: Digital & Social -->
+    <div class="creative-card">
+      <div class="creative-card-num">04 — Channels</div>
+      <div class="creative-card-title">Digital Content &amp; Social</div>
+      <p class="creative-card-desc">Built brand identity and community from scratch for StarlightKpop — writing all social content, email campaigns, and product descriptions. At WebMD, created stakeholder-facing performance reports that turned raw data into clear, visual narratives.</p>
+      <div class="creative-tags">
+        <div class="creative-tag">Social Content</div>
+        <div class="creative-tag">Email Campaigns</div>
+        <div class="creative-tag">Data Storytelling</div>
+        <div class="creative-tag">Brand Identity</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
