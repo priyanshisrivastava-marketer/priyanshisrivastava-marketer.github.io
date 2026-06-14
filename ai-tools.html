@@ -17,12 +17,7 @@
     --text: #f0ece4;
     --muted: #6b6b6b;
   }
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-  }
+  body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
   body::before {
     content: '';
     position: fixed;
@@ -31,15 +26,8 @@
     pointer-events: none;
     z-index: 0;
   }
-  .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    position: relative;
-    z-index: 1;
-  }
+  .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 1; }
 
-  /* Nav */
   nav {
     padding: 1.75rem 0;
     display: flex;
@@ -55,20 +43,10 @@
     text-decoration: none;
     letter-spacing: 0.05em;
   }
-  .nav-back {
-    font-size: 0.75rem;
-    color: var(--muted);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: color 0.2s;
-  }
+  .nav-back { font-size: 0.75rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
   .nav-back:hover { color: var(--text); }
 
-  /* Hero */
-  .hero {
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
+  .hero { padding: 4rem 0 3rem; text-align: center; }
   .eyebrow {
     font-size: 0.68rem;
     font-weight: 500;
@@ -81,53 +59,15 @@
     justify-content: center;
     gap: 0.5rem;
   }
-  .eyebrow::before, .eyebrow::after {
-    content: '';
-    width: 30px;
-    height: 1px;
-    background: var(--accent);
-    opacity: 0.4;
-  }
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 6vw, 4rem);
-    font-weight: 600;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.25rem;
-  }
+  .eyebrow::before, .eyebrow::after { content: ''; width: 30px; height: 1px; background: var(--accent); opacity: 0.4; }
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.2rem, 6vw, 4rem); font-weight: 600; line-height: 1.1; letter-spacing: -0.01em; margin-bottom: 1.25rem; }
   h1 em { font-style: italic; color: var(--accent); }
-  .hero-sub {
-    font-size: 0.9rem;
-    color: var(--muted);
-    font-weight: 300;
-    line-height: 1.75;
-    max-width: 500px;
-    margin: 0 auto 2.5rem;
-  }
-  .stats-row {
-    display: flex;
-    gap: 2.5rem;
-    justify-content: center;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-  }
+  .hero-sub { font-size: 0.9rem; color: var(--muted); font-weight: 300; line-height: 1.75; max-width: 500px; margin: 0 auto 2.5rem; }
+  .stats-row { display: flex; gap: 2.5rem; justify-content: center; margin-bottom: 3rem; flex-wrap: wrap; }
   .stat { text-align: center; }
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--accent);
-    display: block;
-  }
-  .stat-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 600; color: var(--accent); display: block; }
+  .stat-label { font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
 
-  /* Section eyebrow */
   .section-eyebrow {
     font-size: 0.65rem;
     letter-spacing: 0.15em;
@@ -138,14 +78,8 @@
     align-items: center;
     gap: 0.75rem;
   }
-  .section-eyebrow::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+  .section-eyebrow::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-  /* Tool card */
   .tool-card {
     background: var(--surface);
     border: 1px solid rgba(200,169,110,0.18);
@@ -163,33 +97,10 @@
     gap: 1rem;
     flex-wrap: wrap;
   }
-  .tool-card-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.6rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  .tool-card-desc {
-    font-size: 0.82rem;
-    color: var(--muted);
-    line-height: 1.7;
-    max-width: 500px;
-    margin-bottom: 0.85rem;
-  }
-  .tool-tags {
-    display: flex;
-    gap: 0.45rem;
-    flex-wrap: wrap;
-  }
-  .tag {
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    padding: 0.2rem 0.6rem;
-    border-radius: 100px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-  }
+  .tool-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .tool-card-desc { font-size: 0.82rem; color: var(--muted); line-height: 1.7; max-width: 500px; margin-bottom: 0.85rem; }
+  .tool-tags { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+  .tag { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.06em; padding: 0.2rem 0.6rem; border-radius: 100px; border: 1px solid var(--border); color: var(--muted); }
   .live-badge {
     display: inline-flex;
     align-items: center;
@@ -206,21 +117,12 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
-  .live-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 2s ease-in-out infinite;
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
-  }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-  /* Action buttons row */
+  /* Action buttons */
   .action-row {
-    padding: 1.25rem 2rem;
+    padding: 1.5rem 2rem;
     border-bottom: 1px solid var(--border);
     display: flex;
     gap: 0.75rem;
@@ -232,109 +134,85 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary { background: var(--accent); color: #0a0a0a; font-weight: 700; font-size: 0.82rem; }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+  .btn-video { background: rgba(255,0,0,0.1); color: #ff6b6b; border: 1px solid rgba(255,0,0,0.2); }
+  .btn-video:hover { background: rgba(255,0,0,0.18); }
+  .btn-secondary { background: rgba(255,255,255,0.05); color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+  /* Big CTA launch box */
+  .launch-box {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .launch-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(200,169,110,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .launch-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+  .launch-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--text);
+  }
+  .launch-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 420px;
+    margin: 0 auto 1.75rem;
+  }
+  .launch-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--accent);
+    color: #0a0a0a;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 0.9rem 2.2rem;
+    border-radius: 12px;
     text-decoration: none;
     transition: all 0.2s;
     letter-spacing: 0.02em;
   }
-  .btn-primary {
-    background: var(--accent);
-    color: #0a0a0a;
-    font-weight: 600;
-  }
-  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-  .btn-secondary {
-    background: rgba(255,255,255,0.05);
-    color: var(--text);
-    border: 1px solid var(--border);
-  }
-  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
-  .btn-video {
-    background: rgba(255,0,0,0.1);
-    color: #ff6b6b;
-    border: 1px solid rgba(255,0,0,0.2);
-  }
-  .btn-video:hover { background: rgba(255,0,0,0.15); }
-
-  /* Workflow snapshot */
-  .workflow-section {
-    padding: 1.5rem 2rem;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface2);
-  }
-  .workflow-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
-  .workflow-img {
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid var(--border);
-    display: block;
-  }
-  .workflow-caption {
+  .launch-btn:hover { opacity: 0.88; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,169,110,0.25); }
+  .launch-note {
+    margin-top: 1rem;
     font-size: 0.72rem;
     color: var(--muted);
-    margin-top: 0.6rem;
-    text-align: center;
   }
 
-  /* Agent embed */
-  .agent-section {
-    border-top: 1px solid var(--border);
-  }
-  .agent-bar {
-    background: var(--accent-soft);
-    border-bottom: 1px solid rgba(200,169,110,0.12);
-    padding: 0.75rem 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  .agent-bar-left {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .agent-bar-label {
-    font-size: 0.68rem;
-    color: var(--accent);
-    font-weight: 600;
-    letter-spacing: 0.08em;
-  }
-  .agent-note {
-    font-size: 0.68rem;
-    color: var(--muted);
-  }
-  iframe {
-    width: 100%;
-    height: 680px;
-    border: none;
-    display: block;
-    background: #ffffff;
-  }
+  /* Workflow snapshot */
+  .workflow-section { padding: 1.75rem 2rem; border-bottom: 1px solid var(--border); }
+  .workflow-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
+  .workflow-img { width: 100%; border-radius: 10px; border: 1px solid var(--border); display: block; }
+  .workflow-caption { font-size: 0.7rem; color: var(--muted); margin-top: 0.6rem; text-align: center; }
 
   /* Sample output */
-  .sample-section {
-    padding: 1.5rem 2rem;
-    border-top: 1px solid var(--border);
-    background: var(--surface2);
-  }
-  .sample-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
+  .sample-section { padding: 1.75rem 2rem; }
+  .sample-label { font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
   .sample-output {
     background: var(--bg);
     border: 1px solid var(--border);
@@ -342,116 +220,46 @@
     padding: 1.25rem;
     font-size: 0.78rem;
     color: #a0a0a0;
-    line-height: 1.7;
-    max-height: 200px;
+    line-height: 1.75;
+    max-height: 220px;
     overflow-y: auto;
     font-family: 'Inter', sans-serif;
+    white-space: pre-wrap;
   }
   .sample-output::-webkit-scrollbar { width: 3px; }
   .sample-output::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
-  .view-full-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    margin-top: 0.85rem;
-    font-size: 0.72rem;
-    color: var(--accent);
-    text-decoration: none;
-    transition: opacity 0.2s;
-  }
+  .view-full-btn { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.85rem; font-size: 0.72rem; color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
   .view-full-btn:hover { opacity: 0.75; }
 
+  /* How it works */
+  .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+  .how-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.25rem; text-align: center; }
+  .how-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .how-label { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.3rem; }
+  .how-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
+
   /* Coming soon */
-  .coming-soon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-bottom: 3rem;
-  }
-  .coming-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 1.5rem;
-    opacity: 0.55;
-    position: relative;
-    overflow: hidden;
-  }
-  .coming-card::after {
-    content: 'COMING SOON';
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    font-size: 0.52rem;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    border: 1px solid rgba(200,169,110,0.3);
-    padding: 0.15rem 0.4rem;
-    border-radius: 4px;
-  }
+  .coming-soon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+  .coming-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; opacity: 0.55; position: relative; overflow: hidden; }
+  .coming-card::after { content: 'COMING SOON'; position: absolute; top: 0.75rem; right: 0.75rem; font-size: 0.52rem; letter-spacing: 0.1em; color: var(--accent); border: 1px solid rgba(200,169,110,0.3); padding: 0.15rem 0.4rem; border-radius: 4px; }
   .coming-icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
-  .coming-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-  }
+  .coming-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
   .coming-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
 
   /* Built by */
-  .built-by {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 1.75rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 3rem;
-  }
-  .built-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.3rem;
-  }
+  .built-by { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1.75rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem; }
+  .built-name { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.3rem; }
   .built-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
-  .portfolio-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    background: var(--accent);
-    color: #0a0a0a;
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    padding: 0.7rem 1.4rem;
-    border-radius: 10px;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: opacity 0.2s;
-  }
+  .portfolio-btn { display: inline-flex; align-items: center; gap: 0.4rem; background: var(--accent); color: #0a0a0a; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.05em; padding: 0.7rem 1.4rem; border-radius: 10px; text-decoration: none; white-space: nowrap; transition: opacity 0.2s; }
   .portfolio-btn:hover { opacity: 0.85; }
 
-  /* Footer */
-  footer {
-    border-top: 1px solid var(--border);
-    padding: 1.5rem 0;
-    text-align: center;
-    font-size: 0.7rem;
-    color: var(--muted);
-    margin-bottom: 1rem;
-  }
+  footer { border-top: 1px solid var(--border); padding: 1.5rem 0; text-align: center; font-size: 0.7rem; color: var(--muted); margin-bottom: 1rem; }
   footer a { color: var(--accent); text-decoration: none; }
 
   @media (max-width: 600px) {
-    .coming-soon-grid { grid-template-columns: 1fr; }
+    .coming-soon-grid, .how-grid { grid-template-columns: 1fr; }
     .tool-card-header { flex-direction: column; }
     .stats-row { gap: 1.5rem; }
-    iframe { height: 580px; }
-    .action-row { gap: 0.5rem; }
   }
 </style>
 </head>
@@ -468,18 +276,9 @@
     <h1>Live <em>AI Tools</em><br/>Built for Marketers</h1>
     <p class="hero-sub">A collection of AI-powered marketing agents built using no-code LLM tools — each solving a real problem in B2B and healthcare marketing.</p>
     <div class="stats-row">
-      <div class="stat">
-        <span class="stat-num">4</span>
-        <span class="stat-label">AI Agents Built</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">100%</span>
-        <span class="stat-label">Free to Use</span>
-      </div>
-      <div class="stat">
-        <span class="stat-num">~15s</span>
-        <span class="stat-label">Avg Response Time</span>
-      </div>
+      <div class="stat"><span class="stat-num">4</span><span class="stat-label">AI Agents Built</span></div>
+      <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Free to Use</span></div>
+      <div class="stat"><span class="stat-num">~15s</span><span class="stat-label">Avg Response Time</span></div>
     </div>
   </div>
 
@@ -488,7 +287,6 @@
 
   <div class="tool-card">
 
-    <!-- Header -->
     <div class="tool-card-header">
       <div>
         <div class="tool-card-title">🔍 AI Competitor & Brand Analyzer</div>
@@ -502,53 +300,41 @@
           <span class="tag">CMO Framework</span>
         </div>
       </div>
-      <div class="live-badge">
-        <div class="live-dot"></div>
-        Live Agent
-      </div>
+      <div class="live-badge"><div class="live-dot"></div>Live Agent</div>
     </div>
 
     <!-- Action buttons -->
     <div class="action-row">
-      <a class="action-btn btn-primary" href="https://www.gumloop.com/agents/mHYqnuD5WkVykWQRSGjWMP" target="_blank">
-        🤖 Try Live Agent →
+      <a class="action-btn btn-primary" href="https://www.gumloop.com/agents/mHYqnuD5WkVykWQRSGjWMP" target="_blank">🤖 Try Live Agent →</a>
+      <a class="action-btn btn-video" href="https://youtu.be/T8uFSkXcMOc" target="_blank">▶ Watch Demo Video</a>
+      <a class="action-btn btn-secondary" href="https://docs.google.com/document/d/1S-UXd4nyN0P1RXVnMNkpE2BnrPoWTX_QKs5sSdRpA2Y/edit?usp=sharing" target="_blank">📄 View Sample Report</a>
+    </div>
+
+    <!-- Big CTA launch box -->
+    <div class="launch-box">
+      <span class="launch-icon">🤖</span>
+      <div class="launch-title">Try the AI Brand Analyzer</div>
+      <div class="launch-desc">Type any brand name or "Brand A vs Brand B" — the AI will generate a full CMO-level intelligence report in under 15 seconds.</div>
+      <a class="launch-btn" href="https://www.gumloop.com/agents/mHYqnuD5WkVykWQRSGjWMP" target="_blank">
+        ⚡ Launch AI Analyzer →
       </a>
-      <a class="action-btn btn-video" href="https://youtu.be/T8uFSkXcMOc" target="_blank">
-        ▶ Watch Demo Video
-      </a>
-      <a class="action-btn btn-secondary" href="https://docs.google.com/document/d/1S-UXd4nyN0P1RXVnMNkpE2BnrPoWTX_QKs5sSdRpA2Y/edit?usp=sharing" target="_blank">
-        📄 View Sample Report
-      </a>
+      <div class="launch-note">Opens in a new tab · Free to use · No login required</div>
     </div>
 
     <!-- Workflow snapshot -->
     <div class="workflow-section">
       <div class="workflow-label">🔧 Under the Hood — Workflow Architecture</div>
-      <img
-        class="workflow-img"
-        src="workflow-snapshot.png"
-        alt="Gumloop workflow showing Input → Ask AI → Output nodes for the AI Competitor Analyzer built by Priyanshi Srivastava"
-        onerror="this.style.display='none'; document.getElementById('workflow-fallback').style.display='block';"
-      />
-      <div id="workflow-fallback" style="display:none; background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:2rem; text-align:center;">
-        <div style="font-size:2rem; margin-bottom:0.5rem;">🔧</div>
-        <div style="font-size:0.8rem; color:var(--muted);">Workflow: Input Node → Ask AI (Claude Haiku) → Output Node<br/>Built with Gumloop · CMO-level prompt engineering</div>
-      </div>
+      <img class="workflow-img" src="workflow-snapshot.png" alt="Gumloop workflow: Input Node → Ask AI (Claude Haiku) → Output Node"/>
       <div class="workflow-caption">Gumloop workflow: Input → Ask AI (Claude Haiku) → Output · Built by Priyanshi Srivastava</div>
     </div>
 
     <!-- Sample output -->
     <div class="sample-section">
-      <div class="sample-label">📊 Sample Output Preview</div>
-      <div class="sample-output">
-🏆 BRAND BATTLE REPORT — ZOMATO VS SWIGGY
+      <div class="sample-label">📊 Sample Output — Zomato vs Swiggy</div>
+      <div class="sample-output">🏆 BRAND BATTLE REPORT — ZOMATO VS SWIGGY
 
 🏢 Executive Battle Summary
-Both Zomato and Swiggy dominate India's food delivery duopoly,
-commanding 90%+ of the market. Zomato holds a slight edge in
-brand recall and international credibility (NYSE-listed), while
-Swiggy counters with deeper hyperlocal penetration and a faster
-growing quick commerce arm (Instamart)...
+Both Zomato and Swiggy dominate India's food delivery duopoly, commanding 90%+ of the market. Zomato holds a slight edge in brand recall and international credibility (NYSE-listed), while Swiggy counters with deeper hyperlocal penetration and a faster growing quick commerce arm (Instamart)...
 
 1. 🎯 Positioning Battle
 • Zomato: "Food for every mood" — aspirational, lifestyle-first
@@ -560,64 +346,41 @@ Strengths: Brand recognition, Blinkit acquisition, NYSE listing
 Weaknesses: Higher burn rate, premium perception limits Tier 2 reach
 Opportunities: Health food segment, B2B catering, global expansion
 Threats: Swiggy Instamart, profitability pressure, regulatory scrutiny
-      </div>
-      <a class="view-full-btn" href="https://docs.google.com/document/d/1S-UXd4nyN0P1RXVnMNkpE2BnrPoWTX_QKs5sSdRpA2Y/edit?usp=sharing" target="_blank">
-        View full sample report →
-      </a>
+
+8. 🥊 Head to Head Scorecard
+Brand Clarity:        Zomato 8/10 · Swiggy 7/10
+Emotional Appeal:     Zomato 9/10 · Swiggy 6/10
+Audience Fit:         Zomato 8/10 · Swiggy 8/10
+Channel Effectiveness: Zomato 8/10 · Swiggy 7/10
+Overall CMO Score:    Zomato 8.2/10 · Swiggy 7.4/10</div>
+      <a class="view-full-btn" href="https://docs.google.com/document/d/1S-UXd4nyN0P1RXVnMNkpE2BnrPoWTX_QKs5sSdRpA2Y/edit?usp=sharing" target="_blank">View full sample report →</a>
     </div>
 
-    <!-- Agent embed -->
-    <div class="agent-section">
-      <div class="agent-bar">
-        <div class="agent-bar-left">
-          <div class="live-dot"></div>
-          <div class="agent-bar-label">TRY IT LIVE — AI BRAND ANALYZER</div>
-        </div>
-        <div class="agent-note">Type a brand name or "Brand A vs Brand B" to start</div>
-      </div>
-      <iframe
-        src="https://www.gumloop.com/agents/mHYqnuD5WkVykWQRSGjWMP"
-        title="AI Competitor & Brand Analyzer by Priyanshi Srivastava"
-        loading="lazy"
-        allow="clipboard-write">
-      </iframe>
-    </div>
+  </div>
 
+  <!-- HOW IT WORKS -->
+  <div class="section-eyebrow" style="margin-top:2.5rem;">How It Works</div>
+  <div class="how-grid" style="margin-bottom:3rem;">
+    <div class="how-card"><div class="how-icon">✍️</div><div class="how-label">Enter Brand(s)</div><div class="how-desc">Type one brand for solo analysis or two brands for a full battle report</div></div>
+    <div class="how-card"><div class="how-icon">🧠</div><div class="how-label">AI Analyzes</div><div class="how-desc">CMO-level AI runs SWOT, positioning, audience mapping & gap analysis in seconds</div></div>
+    <div class="how-card"><div class="how-icon">📊</div><div class="how-label">Get Report</div><div class="how-desc">Full intelligence report with scorecard, verdict & strategic recommendations</div></div>
   </div>
 
   <!-- COMING SOON -->
-  <div class="section-eyebrow" style="margin-top:2.5rem;">More Projects · Coming Soon</div>
+  <div class="section-eyebrow">More Projects · Coming Soon</div>
   <div class="coming-soon-grid">
-    <div class="coming-card">
-      <div class="coming-icon">⭐</div>
-      <div class="coming-title">Review Sentiment Analyzer</div>
-      <div class="coming-desc">Paste G2, Gartner or TrustRadius reviews → get a full sentiment report mapped to analyst evaluation criteria</div>
-    </div>
-    <div class="coming-card">
-      <div class="coming-icon">📋</div>
-      <div class="coming-title">Campaign Brief Generator</div>
-      <div class="coming-desc">Input a product and audience → get a full 6-section marketing campaign brief in under 10 seconds</div>
-    </div>
-    <div class="coming-card">
-      <div class="coming-icon">✉️</div>
-      <div class="coming-title">Cold Email Subject Tester</div>
-      <div class="coming-desc">Describe your email context → get 5 subject lines scored for open-rate potential with psychological triggers</div>
-    </div>
+    <div class="coming-card"><div class="coming-icon">⭐</div><div class="coming-title">Review Sentiment Analyzer</div><div class="coming-desc">Paste G2, Gartner or TrustRadius reviews → get a full sentiment report mapped to analyst evaluation criteria</div></div>
+    <div class="coming-card"><div class="coming-icon">📋</div><div class="coming-title">Campaign Brief Generator</div><div class="coming-desc">Input a product and audience → get a full 6-section marketing campaign brief in under 10 seconds</div></div>
+    <div class="coming-card"><div class="coming-icon">✉️</div><div class="coming-title">Cold Email Subject Tester</div><div class="coming-desc">Describe your email context → get 5 subject lines scored for open-rate potential with psychological triggers</div></div>
   </div>
 
-  <!-- Built by -->
+  <!-- BUILT BY -->
   <div class="built-by">
     <div>
       <div class="built-name">Priyanshi Srivastava</div>
-      <div class="built-desc">
-        Marketing Analyst & AI Specialist · WebMD | Medscape · Mumbai, India<br/>
-        Building AI marketing agents using Gumloop, Claude AI & prompt engineering.<br/>
-        Open to PMM, Growth Marketing & Analyst Relations roles globally.
-      </div>
+      <div class="built-desc">Marketing Analyst & AI Specialist · WebMD | Medscape · Mumbai, India<br/>Building AI marketing agents using Gumloop, Claude AI & prompt engineering.<br/>Open to PMM, Growth Marketing & Analyst Relations roles globally.</div>
     </div>
-    <a class="portfolio-btn" href="https://priyanshisrivastava-marketer.github.io">
-      View Full Portfolio →
-    </a>
+    <a class="portfolio-btn" href="https://priyanshisrivastava-marketer.github.io">View Full Portfolio →</a>
   </div>
 
   <footer>
