@@ -10,6 +10,7 @@
   :root {
     --bg: #0a0a0a;
     --surface: #111111;
+    --surface2: #1a1a1a;
     --border: rgba(255,255,255,0.08);
     --accent: #c8a96e;
     --accent-soft: rgba(200,169,110,0.08);
@@ -60,9 +61,6 @@
     text-decoration: none;
     letter-spacing: 0.05em;
     transition: color 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
   }
   .nav-back:hover { color: var(--text); }
 
@@ -98,10 +96,7 @@
     letter-spacing: -0.01em;
     margin-bottom: 1.25rem;
   }
-  h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
+  h1 em { font-style: italic; color: var(--accent); }
   .hero-sub {
     font-size: 0.9rem;
     color: var(--muted);
@@ -132,13 +127,31 @@
     color: var(--muted);
   }
 
+  /* Section eyebrow */
+  .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-eyebrow::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
   /* Tool card */
   .tool-card {
     background: var(--surface);
     border: 1px solid rgba(200,169,110,0.18);
     border-radius: 20px;
     overflow: hidden;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     box-shadow: 0 0 80px rgba(200,169,110,0.04);
   }
   .tool-card-header {
@@ -152,20 +165,20 @@
   }
   .tool-card-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
   }
   .tool-card-desc {
     font-size: 0.82rem;
     color: var(--muted);
-    line-height: 1.65;
-    max-width: 480px;
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 0.85rem;
   }
   .tool-tags {
     display: flex;
     gap: 0.45rem;
-    margin-top: 0.85rem;
     flex-wrap: wrap;
   }
   .tag {
@@ -205,29 +218,150 @@
     50% { opacity: 0.3; }
   }
 
-  /* iframe wrapper */
-  .iframe-wrapper {
-    background: var(--surface);
+  /* Action buttons row */
+  .action-row {
+    padding: 1.25rem 2rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    background: var(--accent-soft);
+  }
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+    letter-spacing: 0.02em;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: #0a0a0a;
+    font-weight: 600;
+  }
+  .btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+  .btn-secondary {
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+  .btn-video {
+    background: rgba(255,0,0,0.1);
+    color: #ff6b6b;
+    border: 1px solid rgba(255,0,0,0.2);
+  }
+  .btn-video:hover { background: rgba(255,0,0,0.15); }
+
+  /* Workflow snapshot */
+  .workflow-section {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface2);
+  }
+  .workflow-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .workflow-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    display: block;
+  }
+  .workflow-caption {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-top: 0.6rem;
+    text-align: center;
+  }
+
+  /* Agent embed */
+  .agent-section {
     border-top: 1px solid var(--border);
   }
-  .iframe-bar {
-    background: rgba(200,169,110,0.05);
-    border-bottom: 1px solid var(--border);
-    padding: 0.65rem 1.25rem;
+  .agent-bar {
+    background: var(--accent-soft);
+    border-bottom: 1px solid rgba(200,169,110,0.12);
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .agent-bar-left {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
-  .bar-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 2s infinite; }
-  .bar-label { font-size: 0.68rem; color: var(--accent); font-weight: 600; letter-spacing: 0.08em; }
+  .agent-bar-label {
+    font-size: 0.68rem;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.08em;
+  }
+  .agent-note {
+    font-size: 0.68rem;
+    color: var(--muted);
+  }
   iframe {
     width: 100%;
     height: 680px;
     border: none;
     display: block;
+    background: #ffffff;
   }
 
-  /* Coming soon cards */
+  /* Sample output */
+  .sample-section {
+    padding: 1.5rem 2rem;
+    border-top: 1px solid var(--border);
+    background: var(--surface2);
+  }
+  .sample-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+  .sample-output {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+    font-size: 0.78rem;
+    color: #a0a0a0;
+    line-height: 1.7;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'Inter', sans-serif;
+  }
+  .sample-output::-webkit-scrollbar { width: 3px; }
+  .sample-output::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .view-full-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.85rem;
+    font-size: 0.72rem;
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .view-full-btn:hover { opacity: 0.75; }
+
+  /* Coming soon */
   .coming-soon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -239,7 +373,7 @@
     border: 1px solid var(--border);
     border-radius: 14px;
     padding: 1.5rem;
-    opacity: 0.6;
+    opacity: 0.55;
     position: relative;
     overflow: hidden;
   }
@@ -248,14 +382,14 @@
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
-    font-size: 0.55rem;
+    font-size: 0.52rem;
     letter-spacing: 0.1em;
     color: var(--accent);
     border: 1px solid rgba(200,169,110,0.3);
     padding: 0.15rem 0.4rem;
     border-radius: 4px;
   }
-  .coming-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .coming-icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
   .coming-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1rem;
@@ -263,24 +397,6 @@
     margin-bottom: 0.4rem;
   }
   .coming-desc { font-size: 0.72rem; color: var(--muted); line-height: 1.5; }
-
-  /* Section title */
-  .section-eyebrow {
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 1.25rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .section-eyebrow::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
 
   /* Built by */
   .built-by {
@@ -301,11 +417,7 @@
     font-weight: 600;
     margin-bottom: 0.3rem;
   }
-  .built-desc {
-    font-size: 0.78rem;
-    color: var(--muted);
-    line-height: 1.6;
-  }
+  .built-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.65; }
   .portfolio-btn {
     display: inline-flex;
     align-items: center;
@@ -339,11 +451,11 @@
     .tool-card-header { flex-direction: column; }
     .stats-row { gap: 1.5rem; }
     iframe { height: 580px; }
+    .action-row { gap: 0.5rem; }
   }
 </style>
 </head>
 <body>
-
 <div class="container">
 
   <nav>
@@ -371,45 +483,110 @@
     </div>
   </div>
 
-  <!-- TOOL 1: LIVE -->
+  <!-- PROJECT 01 -->
   <div class="section-eyebrow">Project 01 · Live Now</div>
 
   <div class="tool-card">
+
+    <!-- Header -->
     <div class="tool-card-header">
       <div>
         <div class="tool-card-title">🔍 AI Competitor & Brand Analyzer</div>
         <div class="tool-card-desc">Enter one brand for a full CMO-level solo analysis, or two brands for a side-by-side Brand Battle Report — complete with SWOT analysis, positioning map, audience intelligence, messaging gaps, head-to-head scorecard and strategic recommendations.</div>
         <div class="tool-tags">
           <span class="tag">Gumloop</span>
-          <span class="tag">Claude AI</span>
+          <span class="tag">Claude Haiku</span>
           <span class="tag">Prompt Engineering</span>
           <span class="tag">SWOT Analysis</span>
           <span class="tag">Competitive Intel</span>
+          <span class="tag">CMO Framework</span>
         </div>
       </div>
       <div class="live-badge">
         <div class="live-dot"></div>
-        Live Tool
+        Live Agent
       </div>
     </div>
 
-    <div class="iframe-wrapper">
-      <div class="iframe-bar">
-        <div class="bar-dot"></div>
-        <div class="bar-label">AI BRAND ANALYZER — POWERED BY CLAUDE AI</div>
+    <!-- Action buttons -->
+    <div class="action-row">
+      <a class="action-btn btn-primary" href="https://www.gumloop.com/agents/mHYqnuD5WkVykWQRSGjWMP" target="_blank">
+        🤖 Try Live Agent →
+      </a>
+      <a class="action-btn btn-video" href="https://youtu.be/T8uFSkXcMOc" target="_blank">
+        ▶ Watch Demo Video
+      </a>
+      <a class="action-btn btn-secondary" href="https://docs.google.com/document/d/1S-UXd4nyN0P1RXVnMNkpE2BnrPoWTX_QKs5sSdRpA2Y/edit?usp=sharing" target="_blank">
+        📄 View Sample Report
+      </a>
+    </div>
+
+    <!-- Workflow snapshot -->
+    <div class="workflow-section">
+      <div class="workflow-label">🔧 Under the Hood — Workflow Architecture</div>
+      <img
+        class="workflow-img"
+        src="workflow-snapshot.png"
+        alt="Gumloop workflow showing Input → Ask AI → Output nodes for the AI Competitor Analyzer built by Priyanshi Srivastava"
+        onerror="this.style.display='none'; document.getElementById('workflow-fallback').style.display='block';"
+      />
+      <div id="workflow-fallback" style="display:none; background:var(--bg); border:1px solid var(--border); border-radius:10px; padding:2rem; text-align:center;">
+        <div style="font-size:2rem; margin-bottom:0.5rem;">🔧</div>
+        <div style="font-size:0.8rem; color:var(--muted);">Workflow: Input Node → Ask AI (Claude Haiku) → Output Node<br/>Built with Gumloop · CMO-level prompt engineering</div>
+      </div>
+      <div class="workflow-caption">Gumloop workflow: Input → Ask AI (Claude Haiku) → Output · Built by Priyanshi Srivastava</div>
+    </div>
+
+    <!-- Sample output -->
+    <div class="sample-section">
+      <div class="sample-label">📊 Sample Output Preview</div>
+      <div class="sample-output">
+🏆 BRAND BATTLE REPORT — ZOMATO VS SWIGGY
+
+🏢 Executive Battle Summary
+Both Zomato and Swiggy dominate India's food delivery duopoly,
+commanding 90%+ of the market. Zomato holds a slight edge in
+brand recall and international credibility (NYSE-listed), while
+Swiggy counters with deeper hyperlocal penetration and a faster
+growing quick commerce arm (Instamart)...
+
+1. 🎯 Positioning Battle
+• Zomato: "Food for every mood" — aspirational, lifestyle-first
+• Swiggy: "Deliver what you need" — utility, speed, reliability
+→ Zomato owns emotional territory. Swiggy owns functional trust.
+
+6. 📊 SWOT — Zomato
+Strengths: Brand recognition, Blinkit acquisition, NYSE listing
+Weaknesses: Higher burn rate, premium perception limits Tier 2 reach
+Opportunities: Health food segment, B2B catering, global expansion
+Threats: Swiggy Instamart, profitability pressure, regulatory scrutiny
+      </div>
+      <a class="view-full-btn" href="https://docs.google.com/document/d/1S-UXd4nyN0P1RXVnMNkpE2BnrPoWTX_QKs5sSdRpA2Y/edit?usp=sharing" target="_blank">
+        View full sample report →
+      </a>
+    </div>
+
+    <!-- Agent embed -->
+    <div class="agent-section">
+      <div class="agent-bar">
+        <div class="agent-bar-left">
+          <div class="live-dot"></div>
+          <div class="agent-bar-label">TRY IT LIVE — AI BRAND ANALYZER</div>
+        </div>
+        <div class="agent-note">Type a brand name or "Brand A vs Brand B" to start</div>
       </div>
       <iframe
-        src="https://www.gumloop.com/pipeline?workbook_id=p3mpGEcySro38DMNf3USDL"
+        src="https://www.gumloop.com/agents/mHYqnuD5WkVykWQRSGjWMP"
         title="AI Competitor & Brand Analyzer by Priyanshi Srivastava"
         loading="lazy"
         allow="clipboard-write">
       </iframe>
     </div>
+
   </div>
 
   <!-- COMING SOON -->
-  <div class="section-eyebrow" style="margin-top:2rem;">More Projects · Coming Soon</div>
-
+  <div class="section-eyebrow" style="margin-top:2.5rem;">More Projects · Coming Soon</div>
   <div class="coming-soon-grid">
     <div class="coming-card">
       <div class="coming-icon">⭐</div>
@@ -424,7 +601,7 @@
     <div class="coming-card">
       <div class="coming-icon">✉️</div>
       <div class="coming-title">Cold Email Subject Tester</div>
-      <div class="coming-desc">Describe your email context → get 5 subject lines scored for open-rate potential with psychological triggers explained</div>
+      <div class="coming-desc">Describe your email context → get 5 subject lines scored for open-rate potential with psychological triggers</div>
     </div>
   </div>
 
