@@ -722,6 +722,99 @@
     .creative-card.wide { grid-column: 1; grid-template-columns: 1fr; }
   }
 
+  /* AI Tools Section */
+  #aitools { background: var(--bg2); }
+  .aitools-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5px; margin-top: 4rem;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .aitool-card {
+    background: var(--bg3); padding: 2.5rem;
+    position: relative; overflow: hidden;
+    transition: background 0.3s ease;
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .aitool-card:hover { background: #151515; }
+  .aitool-card::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(232,197,71,0.04) 0%, transparent 60%);
+    opacity: 0; transition: opacity 0.4s ease;
+  }
+  .aitool-card:hover::after { opacity: 1; }
+  .aitool-card.featured {
+    grid-column: 1 / -1;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 3rem; align-items: start;
+  }
+  .aitool-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--text-dim);
+  }
+  .aitool-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.25rem 0.7rem;
+    border: 1px solid rgba(232,197,71,0.3);
+    font-family: 'DM Mono', monospace; font-size: 0.58rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: 0.5rem;
+    width: fit-content;
+  }
+  .aitool-badge-dot {
+    width: 5px; height: 5px; border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+  }
+  .aitool-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem; font-weight: 300; color: var(--text);
+    line-height: 1.2;
+  }
+  .aitool-desc {
+    color: var(--text-muted); font-size: 0.88rem; line-height: 1.8;
+  }
+  .aitool-steps {
+    display: flex; flex-direction: column; gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
+  .aitool-step {
+    display: flex; align-items: flex-start; gap: 1rem;
+    font-family: 'DM Mono', monospace; font-size: 0.68rem;
+    letter-spacing: 0.04em; color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .aitool-step-num {
+    color: var(--accent); flex-shrink: 0; min-width: 1.2rem;
+  }
+  .aitool-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
+  .aitool-tag {
+    padding: 0.3rem 0.8rem;
+    border: 1px solid var(--border);
+    font-family: 'DM Mono', monospace; font-size: 0.6rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-dim); transition: all 0.2s;
+  }
+  .aitool-card:hover .aitool-tag { border-color: #2a2a2a; color: var(--text-muted); }
+  .aitool-link {
+    display: inline-block; margin-top: 1rem;
+    font-family: 'DM Mono', monospace; font-size: 0.65rem;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); text-decoration: none;
+    border: 1px solid rgba(232,197,71,0.3);
+    padding: 0.5rem 1rem; transition: all 0.2s;
+    width: fit-content;
+  }
+  .aitool-link:hover {
+    background: rgba(232,197,71,0.06);
+    border-color: var(--accent);
+  }
+  @media (max-width: 900px) {
+    .aitools-grid { grid-template-columns: 1fr; }
+    .aitool-card.featured { grid-column: 1; grid-template-columns: 1fr; }
+  }
+
 </style>
 </head>
 <body>
@@ -737,6 +830,7 @@
     <li><a href="#creative">Creative</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#aitools">AI Tools</a></li>
     <li><a href="#powerbi">BI Dashboard</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -1054,10 +1148,11 @@
       <div class="project-title">D2C Full-Funnel Growth Experiment</div>
       <p class="project-desc">Built and scaled StarlightKpop Store from zero — running Meta Ads, Google Ads, and lifecycle email as a live growth experiment across acquisition, conversion, and retention.</p>
       <div class="project-result">
-        <div class="result-item"><strong>35%</strong> sales growth in 3 months</div>
-        <div class="result-item"><strong>12%+</strong> Shopify conversion rate</div>
-        <div class="result-item"><strong>15%</strong> abandoned cart recovery via Mailchimp</div>
+        <div class="result-item"><strong>430+</strong> sessions in a single day · 1.2K% spike</div>
+        <div class="result-item"><strong>142</strong> live visitors at peak · 15+ cities reached</div>
+        <div class="result-item">Stack: <strong>Shopify · Instagram · Meta Ads</strong></div>
       </div>
+      <a href="starlight-kpop.html" style="display:inline-block;margin-top:1.5rem;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid rgba(232,197,71,0.3);padding:0.5rem 1rem;transition:all 0.2s;" onmouseover="this.style.background='rgba(232,197,71,0.06)';this.style.borderColor='var(--accent)'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(232,197,71,0.3)'">View Case Study ↗</a>
     </div>
     <div class="project-card">
       <div class="project-num">04</div>
@@ -1069,6 +1164,87 @@
         <div class="result-item">Clients: <strong>Merck · AbbVie · AstraZeneca</strong></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- AI TOOLS -->
+<section id="aitools">
+  <div class="section-label">AI Agent Portfolio</div>
+  <h2 class="section-title">No-code agents<br><em>built to work</em></h2>
+  <p class="section-sub" style="margin-bottom:0;">Designing and deploying AI marketing agents using Gumloop — automating workflows that used to take hours into systems that run on their own.</p>
+  <div class="aitools-grid reveal">
+
+    <!-- Featured: Competitor & Brand Analyzer — LIVE -->
+    <div class="aitool-card featured">
+      <div>
+        <div class="aitool-num">01 — Featured</div>
+        <div class="aitool-badge"><span class="aitool-badge-dot"></span>Live Now · Free to Try</div>
+        <div class="aitool-title">AI Competitor &amp; Brand Analyzer</div>
+        <p class="aitool-desc" style="margin-top:0.75rem;">
+          Enter one brand for a full CMO-level analysis, or two brands for a side-by-side Brand Battle Report — complete with SWOT, positioning map, audience intelligence, messaging gaps, head-to-head scorecard, and strategic recommendations. Delivers in under 15 seconds.
+        </p>
+        <div class="aitool-tags" style="margin-top:1.2rem;">
+          <span class="aitool-tag">Gumloop</span>
+          <span class="aitool-tag">Claude Haiku</span>
+          <span class="aitool-tag">Prompt Engineering</span>
+          <span class="aitool-tag">SWOT Analysis</span>
+          <span class="aitool-tag">Competitive Intel</span>
+          <span class="aitool-tag">CMO Framework</span>
+        </div>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;margin-top:1.5rem;">
+          <a href="ai-tools.html" class="aitool-link" style="margin-top:0;">View Full Agent Page ↗</a>
+          <a href="https://www.gumloop.com/agents/mHYqnuD5WkVykWQRSGjWMP" target="_blank" class="aitool-link" style="margin-top:0;">Try Live Agent ↗</a>
+          <a href="https://youtu.be/T8uFSkXcMOc" target="_blank" class="aitool-link" style="margin-top:0;">Watch Demo ↗</a>
+        </div>
+      </div>
+      <div class="aitool-steps">
+        <div style="font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.75rem;">How it works</div>
+        <div class="aitool-step"><span class="aitool-step-num">01</span>Type one brand or "Brand A vs Brand B"</div>
+        <div class="aitool-step"><span class="aitool-step-num">02</span>AI runs CMO-level SWOT, positioning &amp; audience mapping</div>
+        <div class="aitool-step"><span class="aitool-step-num">03</span>Messaging gaps and opportunities identified</div>
+        <div class="aitool-step"><span class="aitool-step-num">04</span>Head-to-head scorecard with verdict generated</div>
+        <div class="aitool-step"><span class="aitool-step-num">05</span>Full intelligence report ready in ~15 seconds</div>
+      </div>
+    </div>
+
+    <!-- Card 2: Marketing Ops Automation — Building -->
+    <div class="aitool-card">
+      <div class="aitool-num">02</div>
+      <div class="aitool-badge" style="border-color:rgba(74,158,255,0.3);color:var(--accent2);"><span style="width:5px;height:5px;border-radius:50%;background:var(--accent2);animation:pulse 2s infinite;display:inline-block;"></span>Building Now</div>
+      <div class="aitool-title">Marketing Ops Automation</div>
+      <p class="aitool-desc">
+        Building AI agents using Gumloop and Google Enterprise Agents to eliminate repetitive manual workflows — automating campaign tracking, validation, and reporting across a global marketing ops team at WebMD | Medscape.
+      </p>
+      <div class="aitool-steps">
+        <div class="aitool-step"><span class="aitool-step-num">→</span><strong style="color:var(--text)">70%</strong> reduction in manual processing time</div>
+        <div class="aitool-step"><span class="aitool-step-num">→</span><strong style="color:var(--text)">150%</strong> boost in team productivity</div>
+        <div class="aitool-step"><span class="aitool-step-num">→</span><strong style="color:var(--text)">40%</strong> faster onboarding via process automation</div>
+      </div>
+      <div class="aitool-tags">
+        <span class="aitool-tag">Gumloop</span>
+        <span class="aitool-tag">Google Enterprise</span>
+        <span class="aitool-tag">Salesforce</span>
+        <span class="aitool-tag">Workflow Design</span>
+      </div>
+    </div>
+
+    <!-- Card 3: Prompt Engineering -->
+    <div class="aitool-card">
+      <div class="aitool-num">03</div>
+      <div class="aitool-title">Prompt Engineering & Agent Orchestration</div>
+      <p class="aitool-desc">
+        Designing structured prompt systems and multi-step agent workflows that handle real marketing tasks — from content generation pipelines to data enrichment flows — without writing a line of code.
+      </p>
+      <div class="aitool-tags" style="margin-top:auto;">
+        <span class="aitool-tag">Prompt Engineering</span>
+        <span class="aitool-tag">Agent Orchestration</span>
+        <span class="aitool-tag">ChatGPT</span>
+        <span class="aitool-tag">Claude</span>
+        <span class="aitool-tag">Zapier AI</span>
+        <span class="aitool-tag">Copilot</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
