@@ -32,7 +32,14 @@
     cursor: none;
   }
 
-  /* Custom cursor */
+  /* Mobile touch fix */
+  @media (pointer: coarse) {
+    .cursor, .cursor-ring { display: none !important; }
+    body { cursor: auto !important; }
+    a, button { cursor: pointer !important; }
+  }
+
+  /* Custom cursor — desktop only */
   .cursor {
     position: fixed; width: 8px; height: 8px;
     background: var(--accent); border-radius: 50%;
@@ -75,6 +82,8 @@
     font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--text-muted); text-decoration: none;
     transition: color 0.2s; position: relative;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: rgba(232,197,71,0.15);
   }
   .nav-links a::after {
     content: ''; position: absolute; bottom: -4px; left: 0;
@@ -797,16 +806,19 @@
     color: var(--text-dim); transition: all 0.2s;
   }
   .aitool-card:hover .aitool-tag { border-color: #2a2a2a; color: var(--text-muted); }
-  .aitool-link {
+  .aitool-link, .proj-link {
     display: inline-block; margin-top: 1rem;
     font-family: 'DM Mono', monospace; font-size: 0.65rem;
     letter-spacing: 0.12em; text-transform: uppercase;
     color: var(--accent); text-decoration: none;
     border: 1px solid rgba(232,197,71,0.3);
-    padding: 0.5rem 1rem; transition: all 0.2s;
+    padding: 0.5rem 1rem; transition: background 0.2s, border-color 0.2s;
     width: fit-content;
+    -webkit-tap-highlight-color: rgba(232,197,71,0.15);
+    touch-action: manipulation;
   }
-  .aitool-link:hover {
+  .aitool-link:hover, .proj-link:hover,
+  .aitool-link:active, .proj-link:active {
     background: rgba(232,197,71,0.06);
     border-color: var(--accent);
   }
@@ -1152,7 +1164,7 @@
         <div class="result-item"><strong>142</strong> live visitors at peak · 15+ cities reached</div>
         <div class="result-item">Stack: <strong>Shopify · Instagram · Meta Ads</strong></div>
       </div>
-      <a href="starlight-kpop.html" style="display:inline-block;margin-top:1.5rem;font-family:'DM Mono',monospace;font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid rgba(232,197,71,0.3);padding:0.5rem 1rem;transition:all 0.2s;" onmouseover="this.style.background='rgba(232,197,71,0.06)';this.style.borderColor='var(--accent)'" onmouseout="this.style.background='transparent';this.style.borderColor='rgba(232,197,71,0.3)'">View Case Study ↗</a>
+      <a href="starlight-kpop.html" class="proj-link">View Case Study ↗</a>
     </div>
     <div class="project-card">
       <div class="project-num">04</div>
